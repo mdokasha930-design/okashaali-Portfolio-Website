@@ -9,25 +9,24 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background: #050505; color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Animated Background */
         #particles-js { position: fixed; width: 100%; height: 100%; z-index: 0; }
 
-        /* Hero Section */
         .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1; text-align: center; }
         .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #007bff; margin-bottom: 20px; object-fit: cover; box-shadow: 0 0 20px rgba(0,123,255,0.5); }
         
         h1 { font-size: 3.5rem; background: linear-gradient(to right, #007bff, #00ffcc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* Glass Cards */
         section { padding: 80px 20px; position: relative; z-index: 1; max-width: 900px; margin: auto; }
         .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; margin-bottom: 30px; transition: 0.3s; }
         .glass-card:hover { border-color: #007bff; transform: translateY(-5px); }
 
         .tag { background: #007bff; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; margin: 5px; display: inline-block; }
         
-        /* Buttons */
-        .btn { padding: 12px 25px; background: transparent; border: 2px solid #007bff; color: white; text-decoration: none; border-radius: 30px; transition: 0.3s; font-weight: bold; }
-        .btn:hover { background: #007bff; box-shadow: 0 0 15px #007bff; }
+        .btn { padding: 12px 25px; background: transparent; border: 2px solid #007bff; color: white; text-decoration: none; border-radius: 30px; transition: 0.3s; font-weight: bold; display: inline-block; }
+        .btn:hover { background: #007bff; box-shadow: 0 0 15px #007bff; color: white; }
+
+        input, textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #333; background: #111; color: white; outline: none; }
+        input:focus, textarea:focus { border-color: #007bff; }
 
         footer { text-align: center; padding: 40px; color: #555; position: relative; z-index: 1; }
     </style>
@@ -46,33 +45,30 @@
     <section id="about" data-aos="fade-up">
         <div class="glass-card">
             <h2 style="color: #007bff; margin-bottom: 15px;">About Me</h2>
-            <p style="color: #ccc; line-height: 1.8;">
-                <section id="about" data-aos="fade-up">
-    <div class="glass-card">
-        <h2 style="color: #007bff; margin-bottom: 15px;">About Me</h2>
-        <p style="color: #ccc; line-height: 1.8; text-align: left;">
-            I am a passionate developer working at the intersection of technology and creativity. 
-            My vision is to develop high-performance <b>E-commerce systems</b>. 
-            Beyond coding, I have a keen interest in 🎬 <b>Video Editing</b> and 📸 <b>Photo Editing</b>, where I specialize as a Nature photographer. 
-            <br><br>
-            In my free time, I love to play ⚽ <b>FC Mobile</b> and 🎮 <b>GTA V</b>. 
-            I am a die-hard fan of ⚽ <b>Lionel Messi</b> and a proud supporter of 💜 <b>KKR</b> in the IPL.
-        </p>
-    </div>
-</section>
-  <section id="contact" data-aos="fade-up">
+            <p style="color: #ccc; line-height: 1.8; text-align: left;">
+                I am a passionate developer working at the intersection of technology and creativity. 
+                My vision is to develop high-performance <b>E-commerce systems</b>. 
+                Beyond coding, I have a keen interest in 🎬 <b>Video Editing</b> and 📸 <b>Photo Editing</b>, where I specialize as a Nature photographer. 
+                <br><br>
+                In my free time, I love to play ⚽ <b>FC Mobile</b> and 🎮 <b>GTA V</b>. 
+                I am a die-hard fan of ⚽ <b>Lionel Messi</b> and a proud supporter of 💜 <b>KKR</b> in the IPL.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
         <div class="glass-card">
             <h2 style="color: #007bff; margin-bottom: 20px;">Get In Touch</h2>
             <form action="mailto:mdokasha930@gmail.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" placeholder="Your Name" style="padding: 12px; border-radius: 10px; border: 1px solid #333; background: #111; color: white;">
-                <textarea placeholder="Your Message" rows="5" style="padding: 12px; border-radius: 10px; border: 1px solid #333; background: #111; color: white;"></textarea>
-                <button type="submit" class="btn" style="cursor: pointer;">Send Message</button>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn" style="cursor: pointer; width: fit-content;">Send Message</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Okasha Ali | Build with GitHub Pages</p>
+        <p>&copy; 2026 Okasha Ali | Built with GitHub Pages</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -88,9 +84,11 @@
                 "size": { "value": 3 },
                 "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.1, "width": 1 },
                 "move": { "enable": true, "speed": 1 }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "repulse" } }
             }
         });
     </script>
 </body>
 </html>
-          
