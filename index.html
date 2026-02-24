@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Okasha Ali | Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
         .box { border: 1px solid #333; padding: 30px; border-radius: 15px; display: inline-block; background: #1e1e1e; }
@@ -13,16 +15,20 @@
     </style>
 </head>
 <body>
-    <div class="box">
+   <div class="box" data-aos="zoom-in" data-aos-duration="1200">
         <h1>Okasha Ali</h1>
         <p>Digital Builder & Tech Enthusiast</p>
         <hr style="border: 0.5px solid #444; margin: 20px 0;">
         <p>Main modern E-commerce systems aur web solutions banata hoon.</p>
-        <div class="skills">
+        <div class="skills" data-aos="fade-up" data-aos-delay="300">
             <span class="tag">HTML</span> <span class="tag">CSS</span> 
             <span class="tag">JavaScript</span> <span class="tag">GitHub</span>
         </div>
         <p style="margin-top: 20px;">🎮 Gaming: eFootball & GTA V</p>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
