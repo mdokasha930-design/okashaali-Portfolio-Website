@@ -5,27 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Okasha Ali | Portfolio</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
-        .box { border: 1px solid #333; padding: 30px; border-radius: 15px; display: inline-block; background: #1e1e1e; }
-        h1 { color: #007bff; }
-        .skills { margin-top: 20px; }
-        .tag { background: #333; padding: 5px 15px; border-radius: 20px; margin: 5px; display: inline-block; font-size: 0.9rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #0f0f0f; color: white; scroll-behavior: smooth; }
+
+        /* Navigation Bar */
+        nav { background: rgba(0,0,0,0.8); padding: 15px 50px; display: flex; justify-content: space-between; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: #007bff; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; transition: 0.3s; }
+        nav ul li a:hover { color: #007bff; }
+
+        /* Hero Section */
+        header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle, #1e1e1e, #0f0f0f); }
+        h1 { font-size: 4rem; margin-bottom: 10px; }
+        .hero-sub { font-size: 1.2rem; color: #888; margin-bottom: 30px; }
+
+        /* Sections */
+        section { padding: 100px 20px; max-width: 1000px; margin: auto; text-align: center; }
+        .box { background: #1e1e1e; padding: 40px; border-radius: 20px; border: 1px solid #333; }
+        
+        .tag { background: #007bff; padding: 10px 20px; border-radius: 30px; margin: 5px; display: inline-block; font-weight: bold; }
+
+        /* Footer */
+        footer { padding: 50px; background: #000; color: #555; text-align: center; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
-   <div class="box" data-aos="zoom-in" data-aos-duration="1200">
+
+    <nav>
+        <div class="logo">Okasha Ali</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header data-aos="zoom-out" data-aos-duration="1500">
         <h1>Okasha Ali</h1>
-        <p>Digital Builder & Tech Enthusiast</p>
-        <hr style="border: 0.5px solid #444; margin: 20px 0;">
-        <p>Main modern E-commerce systems aur web solutions banata hoon.</p>
-        <div class="skills" data-aos="fade-up" data-aos-delay="300">
-            <span class="tag">HTML</span> <span class="tag">CSS</span> 
-            <span class="tag">JavaScript</span> <span class="tag">GitHub</span>
+        <p class="hero-sub">Digital Builder | Entrepreneur | Tech Enthusiast</p>
+        <p>Building the next generation of E-commerce solutions.</p>
+    </header>
+
+    <section id="about" data-aos="fade-up">
+        <div class="box">
+            <h2>About Me</h2>
+            <p style="margin: 20px 0; line-height: 1.8;">
+                Main ek developer hoon jo modern design aur solid functionality ko combine karne mein yakeen rakhta hai. 
+                Mera main interest E-commerce systems develop karne mein hai. 📸 Photo Editing aur 🎮 Gaming (eFootball/GTA V) meri hobby hai.
+            </p>
+            <div class="skills">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub</span>
+            </div>
         </div>
-        <p style="margin-top: 20px;">🎮 Gaming: eFootball & GTA V</p>
-    </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 Okasha Ali. All rights reserved.</p>
+        <p>Connect with me: mdokasha930@gmail.com</p>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
